@@ -8,7 +8,8 @@ const Routes = require('./routes')
 //     res.send('Respuesta al get: Hola Mundo');
 // });
 
-
+app.use(express.json());
+// app.use(express.urlencoded({ extended: true }))
 app.use('/users', Routes.UserRoutes);
 app.use('/api', Routes.ApiRoutes);
 
